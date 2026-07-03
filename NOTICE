@@ -1,0 +1,15 @@
+tidal-conductor is licensed under the MIT License (see LICENSE).
+
+It is a separate program that talks to TidalCycles and SuperCollider over OSC.
+It does not link against them, but it depends on them at development time
+(pattern verification harness) and at run time (the integration snippets),
+and those projects carry their own licenses:
+
+- TidalCycles (https://tidalcycles.org) — GNU General Public License v3.0
+- SuperCollider (https://supercollider.github.io) — GNU General Public License v3.0
+- SuperDirt (https://github.com/musikinformatik/SuperDirt) — GNU General Public License v2.0
+
+Unless otherwise noted, the original integration snippets in this repository
+(the Tidal and SuperCollider files under integration/) are licensed under the
+MIT License. They require separately installed GPL-licensed host software; no
+upstream GPL code is redistributed here.

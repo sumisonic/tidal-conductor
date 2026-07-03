@@ -1,0 +1,7 @@
+# Keep the SHA-pinned GitHub Actions current. npm dependencies are exact-pinned by policy and updated by hand.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly

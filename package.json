@@ -1,0 +1,56 @@
+{
+  "name": "tidal-conductor",
+  "version": "0.0.1",
+  "private": true,
+  "description": "An AI session musician for TidalCycles: a conductor process that generates rhythm patterns and drops them into pattern slots of a running Tidal session.",
+  "license": "MIT",
+  "type": "module",
+  "packageManager": "pnpm@10.14.0",
+  "engines": {
+    "node": ">=22.14",
+    "pnpm": ">=10.14"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "conductor": "node --import ./scripts/env.mjs --import tsx src/conductor/run.ts",
+    "api-smoke": "node --import ./scripts/env.mjs --import tsx scripts/api-smoke.ts",
+    "preflight": "node --import ./scripts/env.mjs --import tsx src/conductor/preflight.ts",
+    "pool-add": "node --import ./scripts/env.mjs --import tsx scripts/pool-add.ts",
+    "feedback-add": "node --import ./scripts/env.mjs --import tsx scripts/feedback-add.ts",
+    "gen-training-data": "node --import ./scripts/env.mjs --import tsx scripts/gen-training-data.ts",
+    "build-dataset": "node --import ./scripts/env.mjs --import tsx scripts/build-dataset.ts",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "knip": "knip",
+    "check": "pnpm lint && pnpm typecheck",
+    "verify:patterns": "haskell/verify-patterns.sh",
+    "emit-schema": "node --import ./scripts/env.mjs --import tsx scripts/emit-json-schema.ts",
+    "emit-pattern-cases": "node --import ./scripts/env.mjs --import tsx scripts/emit-pattern-cases.ts",
+    "verify:aipat": "haskell/run-aipat-spec.sh"
+  },
+  "dependencies": {
+    "@ai-sdk/anthropic": "4.0.8",
+    "@ai-sdk/google": "4.0.8",
+    "@ai-sdk/openai": "4.0.8",
+    "@ai-sdk/openai-compatible": "3.0.5",
+    "ai": "7.0.16",
+    "effect": "3.21.4",
+    "ts-pattern": "5.9.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "22.20.0",
+    "eslint": "10.10.0",
+    "eslint-config-prettier": "10.1.8",
+    "globals": "16.5.0",
+    "knip": "6.35.1",
+    "prettier": "3.9.5",
+    "tsx": "4.22.5",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.70.0",
+    "vitest": "2.1.9"
+  }
+}

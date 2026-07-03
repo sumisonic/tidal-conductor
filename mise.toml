@@ -1,0 +1,5 @@
+# Toolchain pins for tidal-conductor (Node + pnpm).
+# GHC/Tidal for the pattern verification harness come from the Nix flake (`nix develop`), not from mise.
+[tools]
+node = "22.14"
+pnpm = "10.14.0"

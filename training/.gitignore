@@ -1,0 +1,5 @@
+# Everything generated stays local (raw.jsonl is the source of truth and can always be rebuilt)
+data/
+adapters/
+fused/
+.venv/

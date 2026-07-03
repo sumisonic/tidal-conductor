@@ -1,0 +1,36 @@
+{
+  "id": "smoke-alt",
+  "name": "Smoke test: alternative layout",
+  "style": "Test fixture: sparse electro. Slot 2's hat leads; the others only fill gaps",
+  "defaultLengthCycles": 4,
+  "slots": [
+    {
+      "slot": 1,
+      "generator": "nsteps",
+      "role": "sample selection (paired with slot 2)",
+      "nRange": [
+        0,
+        5
+      ]
+    },
+    {
+      "slot": 2,
+      "generator": "struct",
+      "role": "hat — 16th-note feel"
+    },
+    {
+      "slot": 3,
+      "generator": "struct",
+      "role": "perc — sparse; do not fill every downbeat"
+    },
+    {
+      "slot": 4,
+      "generator": "nsteps",
+      "role": "timbre index — move it sparingly",
+      "nRange": [
+        0,
+        11
+      ]
+    }
+  ]
+}

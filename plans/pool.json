@@ -1,0 +1,2529 @@
+[
+  {
+    "source": "pool",
+    "band": 0.25,
+    "aim": "Offbeat-led: put every centre of gravity except the kick on the offbeats",
+    "plan": {
+      "version": 0,
+      "energy": 0.25,
+      "bars": 4,
+      "slots": [
+        {
+          "slot": 1,
+          "role": "kick",
+          "rhythm": {
+            "type": "grid",
+            "variants": [
+              [
+                "x",
+                "~",
+                "~",
+                "~"
+              ],
+              [
+                "x",
+                "~",
+                "~",
+                "~"
+              ],
+              [
+                "x",
+                "~",
+                "~",
+                "~"
+              ],
+              [
+                "x",
+                "~",
+                [
+                  "~",
+                  "x"
+                ],
+                "~"
+              ]
+            ]
+          }
+        },
+        {
+          "slot": 2,
+          "role": "hat",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 2,
+            "steps": 8,
+            "rotation": [
+              1,
+              3
+            ]
+          }
+        },
+        {
+          "slot": 3,
+          "role": "snare",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 1,
+            "steps": 8,
+            "rotation": [
+              5,
+              5,
+              5,
+              3
+            ]
+          }
+        },
+        {
+          "slot": 4,
+          "role": "perc",
+          "rhythm": {
+            "type": "grid",
+            "variants": [
+              [
+                "~",
+                [
+                  "~",
+                  "x"
+                ],
+                "~",
+                "~"
+              ],
+              [
+                "~",
+                "~",
+                [
+                  "~",
+                  "x"
+                ],
+                "~"
+              ],
+              [
+                "~",
+                "~",
+                "~",
+                [
+                  "~",
+                  "x"
+                ]
+              ],
+              [
+                "~",
+                "~",
+                [
+                  "~",
+                  "x"
+                ],
+                [
+                  "~",
+                  "x"
+                ]
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "source": "pool",
+    "band": 0.25,
+    "aim": "Emphasised gap: deliberately empty the area around beat 2 and push density to either side",
+    "plan": {
+      "version": 0,
+      "energy": 0.25,
+      "bars": 4,
+      "slots": [
+        {
+          "slot": 1,
+          "role": "kick",
+          "rhythm": {
+            "type": "grid",
+            "variants": [
+              [
+                "x",
+                "~",
+                [
+                  "~",
+                  "x"
+                ],
+                "~"
+              ],
+              [
+                "x",
+                "~",
+                "~",
+                "~"
+              ]
+            ]
+          }
+        },
+        {
+          "slot": 2,
+          "role": "hat",
+          "rhythm": {
+            "type": "grid",
+            "variants": [
+              [
+                "~",
+                "~",
+                "x",
+                "x",
+                "~",
+                "~",
+                "~",
+                "x",
+                "~",
+                "~",
+                "x",
+                "~",
+                "~",
+                "~",
+                "x",
+                "~"
+              ],
+              [
+                "~",
+                "~",
+                "x",
+                "~",
+                "~",
+                "~",
+                "~",
+                "x",
+                "~",
+                "~",
+                "x",
+                "~",
+                "~",
+                "~",
+                "x",
+                "~"
+              ]
+            ]
+          }
+        },
+        {
+          "slot": 3,
+          "role": "snare",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 1,
+            "steps": 8,
+            "rotation": [
+              4,
+              4,
+              4,
+              3
+            ]
+          }
+        },
+        {
+          "slot": 4,
+          "role": "perc",
+          "rhythm": {
+            "type": "grid",
+            "variants": [
+              [
+                "~",
+                "~",
+                [
+                  "~",
+                  "x"
+                ],
+                "~"
+              ],
+              [
+                [
+                  "~",
+                  "x"
+                ],
+                "~",
+                [
+                  "~",
+                  "x"
+                ],
+                "~"
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "source": "pool",
+    "band": 0.25,
+    "aim": "Rotation play: alternate euclid rotations <a b> for a two-cycle swell",
+    "plan": {
+      "bars": 4,
+      "energy": 0.25,
+      "slots": [
+        {
+          "slot": 1,
+          "role": "kick",
+          "rhythm": {
+            "type": "grid",
+            "variants": [
+              [
+                "x",
+                "~",
+                [
+                  "~",
+                  "x"
+                ],
+                "~"
+              ],
+              [
+                "x",
+                "~",
+                "~",
+                "~"
+              ]
+            ]
+          }
+        },
+        {
+          "slot": 2,
+          "role": "hat",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 6,
+            "steps": 16,
+            "rotation": [
+              1,
+              4
+            ]
+          }
+        },
+        {
+          "slot": 3,
+          "role": "snare",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 1,
+            "steps": 8,
+            "rotation": [
+              4,
+              4,
+              4,
+              3
+            ]
+          }
+        },
+        {
+          "slot": 4,
+          "role": "perc",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 3,
+            "steps": 8,
+            "rotation": [
+              5,
+              2
+            ]
+          }
+        }
+      ],
+      "version": 0
+    }
+  },
+  {
+    "source": "pool",
+    "band": 0.25,
+    "aim": "Fill by alternating variants: a grid whose variants get dense only on the 4th cycle",
+    "plan": {
+      "version": 0,
+      "energy": 0.25,
+      "bars": 4,
+      "slots": [
+        {
+          "slot": 1,
+          "role": "kick",
+          "rhythm": {
+            "type": "grid",
+            "variants": [
+              [
+                "x",
+                "~",
+                "~",
+                "~"
+              ],
+              [
+                "x",
+                "~",
+                "~",
+                "~"
+              ],
+              [
+                "x",
+                "~",
+                "~",
+                "~"
+              ],
+              [
+                "x",
+                "~",
+                [
+                  "~",
+                  "x"
+                ],
+                "~"
+              ]
+            ]
+          }
+        },
+        {
+          "slot": 2,
+          "role": "hat",
+          "rhythm": {
+            "type": "grid",
+            "variants": [
+              [
+                "~",
+                "x",
+                "~",
+                "~",
+                "~",
+                "x",
+                "~",
+                "~"
+              ],
+              [
+                "~",
+                "x",
+                "~",
+                "~",
+                "~",
+                "x",
+                "~",
+                "~"
+              ],
+              [
+                "~",
+                "x",
+                "~",
+                "~",
+                "~",
+                "x",
+                "~",
+                "~"
+              ],
+              [
+                "~",
+                "x",
+                "~",
+                "x",
+                "~",
+                "x",
+                "~",
+                "x"
+              ]
+            ]
+          }
+        },
+        {
+          "slot": 3,
+          "role": "snare",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 1,
+            "steps": 8,
+            "rotation": [
+              4,
+              4,
+              4,
+              3
+            ]
+          }
+        },
+        {
+          "slot": 4,
+          "role": "perc",
+          "rhythm": {
+            "type": "grid",
+            "variants": [
+              [
+                "~",
+                "~",
+                [
+                  "~",
+                  "x"
+                ],
+                "~"
+              ],
+              [
+                "~",
+                "~",
+                [
+                  "~",
+                  "x"
+                ],
+                "~"
+              ],
+              [
+                "~",
+                "~",
+                [
+                  "~",
+                  "x"
+                ],
+                "~"
+              ],
+              [
+                "~",
+                "~",
+                [
+                  "~",
+                  "x"
+                ],
+                [
+                  "x",
+                  "x",
+                  "~"
+                ]
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "source": "pool",
+    "band": 0.25,
+    "aim": "Polymetric feel: layer euclids over 8 and 16 to create phase drift",
+    "plan": {
+      "bars": 4,
+      "energy": 0.25,
+      "version": 0,
+      "slots": [
+        {
+          "slot": 1,
+          "role": "kick",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 3,
+            "steps": 8,
+            "rotation": [
+              0,
+              0,
+              0,
+              2
+            ]
+          }
+        },
+        {
+          "slot": 2,
+          "role": "hat",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 5,
+            "steps": 16,
+            "rotation": 1
+          }
+        },
+        {
+          "slot": 3,
+          "role": "snare",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 1,
+            "steps": 8,
+            "rotation": [
+              4,
+              4,
+              4,
+              3
+            ]
+          }
+        },
+        {
+          "slot": 4,
+          "role": "perc",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 3,
+            "steps": 16,
+            "rotation": [
+              0,
+              1,
+              2
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "source": "pool",
+    "band": 0.25,
+    "aim": "Minimal: make each slot work with the fewest hits (keep the total hit count down)",
+    "plan": {
+      "version": 0,
+      "energy": 0.25,
+      "bars": 4,
+      "slots": [
+        {
+          "slot": 1,
+          "role": "kick",
+          "rhythm": {
+            "type": "grid",
+            "variants": [
+              [
+                "x",
+                "~",
+                [
+                  "~",
+                  "x"
+                ],
+                "~"
+              ],
+              [
+                "x",
+                "~",
+                "~",
+                "~"
+              ]
+            ]
+          }
+        },
+        {
+          "slot": 2,
+          "role": "hat",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 4,
+            "steps": 8,
+            "rotation": 1
+          }
+        },
+        {
+          "slot": 3,
+          "role": "snare",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 1,
+            "steps": 8,
+            "rotation": [
+              4,
+              4,
+              4,
+              3
+            ]
+          }
+        },
+        {
+          "slot": 4,
+          "role": "perc",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 3,
+            "steps": 8,
+            "rotation": [
+              1,
+              2
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "source": "pool",
+    "band": 0.25,
+    "aim": "Syncopation: shift the kick itself with x ~ ~ x shapes and let the hat hold the beat",
+    "plan": {
+      "version": 0,
+      "energy": 0.25,
+      "bars": 2,
+      "slots": [
+        {
+          "slot": 1,
+          "role": "kick",
+          "rhythm": {
+            "type": "grid",
+            "variants": [
+              [
+                "x",
+                "~",
+                "~",
+                "x",
+                "~",
+                "~",
+                "~",
+                "~"
+              ],
+              [
+                "x",
+                "~",
+                "~",
+                "x",
+                "~",
+                "~",
+                "x",
+                "~"
+              ]
+            ]
+          }
+        },
+        {
+          "slot": 2,
+          "role": "hat",
+          "rhythm": {
+            "type": "grid",
+            "variants": [
+              [
+                "x",
+                "~",
+                "x",
+                "~",
+                "x",
+                "~",
+                "x",
+                "~"
+              ],
+              [
+                "x",
+                "~",
+                "x",
+                "~",
+                "x",
+                "~",
+                "~",
+                "~"
+              ]
+            ]
+          }
+        },
+        {
+          "slot": 3,
+          "role": "snare",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 1,
+            "steps": 8,
+            "rotation": [
+              4,
+              4,
+              4,
+              3
+            ]
+          }
+        },
+        {
+          "slot": 4,
+          "role": "perc",
+          "rhythm": {
+            "type": "grid",
+            "variants": [
+              [
+                "~",
+                "~",
+                [
+                  "~",
+                  "x"
+                ],
+                "~"
+              ],
+              [
+                "~",
+                [
+                  "~",
+                  "x"
+                ],
+                "~",
+                "~"
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "source": "pool",
+    "band": 0.25,
+    "aim": "Conversational: perc and snare answer each other (one rests where the other hits)",
+    "plan": {
+      "version": 0,
+      "energy": 0.25,
+      "bars": 4,
+      "slots": [
+        {
+          "slot": 1,
+          "role": "kick",
+          "rhythm": {
+            "type": "grid",
+            "variants": [
+              [
+                "x",
+                "~",
+                "~",
+                "~",
+                "~",
+                "~",
+                "~",
+                "~"
+              ],
+              [
+                "x",
+                "~",
+                "~",
+                "~",
+                "~",
+                "~",
+                [
+                  "~",
+                  "x"
+                ],
+                "~"
+              ]
+            ]
+          }
+        },
+        {
+          "slot": 2,
+          "role": "hat",
+          "rhythm": {
+            "type": "grid",
+            "variants": [
+              [
+                "~",
+                "x",
+                "~",
+                "x",
+                "~",
+                "x",
+                "~",
+                "x"
+              ],
+              [
+                "~",
+                "x",
+                "~",
+                "~",
+                "~",
+                "x",
+                "~",
+                "x"
+              ]
+            ]
+          }
+        },
+        {
+          "slot": 3,
+          "role": "snare",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 1,
+            "steps": 8,
+            "rotation": [
+              4,
+              4,
+              4,
+              3
+            ]
+          }
+        },
+        {
+          "slot": 4,
+          "role": "perc",
+          "rhythm": {
+            "type": "grid",
+            "variants": [
+              [
+                "~",
+                "~",
+                "~",
+                [
+                  "~",
+                  "x"
+                ],
+                "~",
+                [
+                  "~",
+                  "x"
+                ],
+                "~",
+                "~"
+              ],
+              [
+                "~",
+                [
+                  "~",
+                  "x"
+                ],
+                "~",
+                "~",
+                "~",
+                [
+                  "~",
+                  "x"
+                ],
+                "~",
+                "~"
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "source": "pool",
+    "band": 0.55,
+    "aim": "Offbeat-led: put every centre of gravity except the kick on the offbeats",
+    "plan": {
+      "version": 0,
+      "energy": 0.55,
+      "bars": 4,
+      "slots": [
+        {
+          "slot": 1,
+          "role": "kick",
+          "rhythm": {
+            "type": "grid",
+            "variants": [
+              [
+                "x",
+                "~",
+                [
+                  "~",
+                  "x"
+                ],
+                "~"
+              ],
+              [
+                "x",
+                "~",
+                "~",
+                "~"
+              ]
+            ]
+          }
+        },
+        {
+          "slot": 2,
+          "role": "hat",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 4,
+            "steps": 8,
+            "rotation": 1
+          }
+        },
+        {
+          "slot": 3,
+          "role": "snare",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 1,
+            "steps": 8,
+            "rotation": [
+              3,
+              3,
+              3,
+              5
+            ]
+          }
+        },
+        {
+          "slot": 4,
+          "role": "perc",
+          "rhythm": {
+            "type": "grid",
+            "variants": [
+              [
+                "~",
+                [
+                  "~",
+                  "~",
+                  "~",
+                  "x"
+                ],
+                "~",
+                "~"
+              ],
+              [
+                "~",
+                [
+                  "~",
+                  "~",
+                  "~",
+                  "x"
+                ],
+                "~",
+                [
+                  "~",
+                  "x"
+                ]
+              ],
+              [
+                "~",
+                "~",
+                "~",
+                [
+                  "~",
+                  "x"
+                ]
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "source": "pool",
+    "band": 0.55,
+    "aim": "Emphasised gap: deliberately empty the area around beat 2 and push density to either side",
+    "plan": {
+      "version": 0,
+      "energy": 0.55,
+      "bars": 4,
+      "slots": [
+        {
+          "slot": 1,
+          "role": "kick",
+          "rhythm": {
+            "type": "grid",
+            "variants": [
+              [
+                "x",
+                "~",
+                [
+                  "~",
+                  "x"
+                ],
+                "~"
+              ],
+              [
+                "x",
+                "~",
+                "~",
+                "~"
+              ]
+            ]
+          }
+        },
+        {
+          "slot": 2,
+          "role": "hat",
+          "rhythm": {
+            "type": "grid",
+            "variants": [
+              [
+                "~",
+                "~",
+                "x",
+                "x",
+                "~",
+                "~",
+                "~",
+                "x",
+                "~",
+                "x",
+                "~",
+                "x",
+                "~",
+                "x",
+                "~",
+                "x"
+              ],
+              [
+                "~",
+                "~",
+                "x",
+                "x",
+                "~",
+                "~",
+                "~",
+                "~",
+                "~",
+                "x",
+                "~",
+                "x",
+                "~",
+                "x",
+                "x",
+                "x"
+              ]
+            ]
+          }
+        },
+        {
+          "slot": 3,
+          "role": "snare",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 1,
+            "steps": 8,
+            "rotation": [
+              4,
+              4,
+              4,
+              3
+            ]
+          }
+        },
+        {
+          "slot": 4,
+          "role": "perc",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 3,
+            "steps": 8,
+            "rotation": [
+              2,
+              7
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "source": "pool",
+    "band": 0.55,
+    "aim": "Rotation play: alternate euclid rotations <a b> for a two-cycle swell",
+    "plan": {
+      "version": 0,
+      "energy": 0.55,
+      "bars": 2,
+      "slots": [
+        {
+          "slot": 1,
+          "role": "kick",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 3,
+            "steps": 8,
+            "rotation": 0
+          }
+        },
+        {
+          "slot": 2,
+          "role": "hat",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 6,
+            "steps": 16,
+            "rotation": [
+              1,
+              4
+            ]
+          }
+        },
+        {
+          "slot": 3,
+          "role": "snare",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 1,
+            "steps": 8,
+            "rotation": [
+              4,
+              4,
+              4,
+              3
+            ]
+          }
+        },
+        {
+          "slot": 4,
+          "role": "perc",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 3,
+            "steps": 8,
+            "rotation": [
+              1,
+              2
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "source": "pool",
+    "band": 0.55,
+    "aim": "Fill by alternating variants: a grid whose variants get dense only on the 4th cycle",
+    "plan": {
+      "version": 0,
+      "energy": 0.55,
+      "bars": 4,
+      "slots": [
+        {
+          "slot": 1,
+          "role": "kick",
+          "rhythm": {
+            "type": "grid",
+            "variants": [
+              [
+                "x",
+                "~",
+                [
+                  "~",
+                  "x"
+                ],
+                "~"
+              ]
+            ]
+          }
+        },
+        {
+          "slot": 2,
+          "role": "hat",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 6,
+            "steps": 16,
+            "rotation": [
+              1,
+              4
+            ]
+          }
+        },
+        {
+          "slot": 3,
+          "role": "snare",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 1,
+            "steps": 8,
+            "rotation": [
+              4,
+              4,
+              4,
+              3
+            ]
+          }
+        },
+        {
+          "slot": 4,
+          "role": "perc",
+          "rhythm": {
+            "type": "grid",
+            "variants": [
+              [
+                "~",
+                "~",
+                "~",
+                "x",
+                "~",
+                "~",
+                "~",
+                "~",
+                "~",
+                "~",
+                "x",
+                "~",
+                "~",
+                "~",
+                "~",
+                "~"
+              ],
+              [
+                "~",
+                "~",
+                "~",
+                "x",
+                "~",
+                "~",
+                "~",
+                "~",
+                "~",
+                "~",
+                "x",
+                "~",
+                "~",
+                "~",
+                "x",
+                "~"
+              ],
+              [
+                "~",
+                "~",
+                "~",
+                "x",
+                "~",
+                "~",
+                "~",
+                "~",
+                "~",
+                "~",
+                "x",
+                "~",
+                "~",
+                "~",
+                "~",
+                "~"
+              ],
+              [
+                "~",
+                "~",
+                "~",
+                "x",
+                "~",
+                "~",
+                "x",
+                "~",
+                "x",
+                "~",
+                "x",
+                "x",
+                "~",
+                "x",
+                "x",
+                "x"
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "source": "pool",
+    "band": 0.55,
+    "aim": "Polymetric feel: layer euclids over 8 and 16 to create phase drift",
+    "plan": {
+      "version": 0,
+      "energy": 0.55,
+      "bars": 4,
+      "slots": [
+        {
+          "slot": 1,
+          "role": "kick",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 3,
+            "steps": 8
+          }
+        },
+        {
+          "slot": 2,
+          "role": "hat",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 6,
+            "steps": 16,
+            "rotation": [
+              1,
+              4
+            ]
+          }
+        },
+        {
+          "slot": 3,
+          "role": "snare",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 1,
+            "steps": 8,
+            "rotation": [
+              4,
+              4,
+              4,
+              3
+            ]
+          }
+        },
+        {
+          "slot": 4,
+          "role": "perc",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 5,
+            "steps": 16,
+            "rotation": [
+              0,
+              1,
+              2
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "source": "pool",
+    "band": 0.55,
+    "aim": "Minimal: make each slot work with the fewest hits (keep the total hit count down)",
+    "plan": {
+      "bars": 4,
+      "energy": 0.55,
+      "version": 0,
+      "slots": [
+        {
+          "slot": 1,
+          "role": "kick",
+          "rhythm": {
+            "type": "grid",
+            "variants": [
+              [
+                "x",
+                "~",
+                [
+                  "~",
+                  "x"
+                ],
+                "~"
+              ],
+              [
+                "x",
+                "~",
+                "~",
+                "~"
+              ]
+            ]
+          }
+        },
+        {
+          "slot": 2,
+          "role": "hat",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 4,
+            "steps": 8,
+            "rotation": 1
+          }
+        },
+        {
+          "slot": 3,
+          "role": "snare",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 1,
+            "steps": 8,
+            "rotation": [
+              4,
+              4,
+              4,
+              3
+            ]
+          }
+        },
+        {
+          "slot": 4,
+          "role": "perc",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 3,
+            "steps": 8,
+            "rotation": [
+              2,
+              5
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "source": "pool",
+    "band": 0.55,
+    "aim": "Syncopation: shift the kick itself with x ~ ~ x shapes and let the hat hold the beat",
+    "plan": {
+      "version": 0,
+      "energy": 0.55,
+      "bars": 4,
+      "slots": [
+        {
+          "slot": 1,
+          "role": "kick",
+          "rhythm": {
+            "type": "grid",
+            "variants": [
+              [
+                "x",
+                "~",
+                "~",
+                "x",
+                "~",
+                "~",
+                "x",
+                "~"
+              ],
+              [
+                "x",
+                "~",
+                "~",
+                "x",
+                "~",
+                "~",
+                "~",
+                "~"
+              ]
+            ]
+          }
+        },
+        {
+          "slot": 2,
+          "role": "hat",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 8,
+            "steps": 16
+          }
+        },
+        {
+          "slot": 3,
+          "role": "snare",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 1,
+            "steps": 8,
+            "rotation": [
+              4,
+              4,
+              4,
+              3
+            ]
+          }
+        },
+        {
+          "slot": 4,
+          "role": "perc",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 3,
+            "steps": 8,
+            "rotation": [
+              2,
+              5
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "source": "pool",
+    "band": 0.55,
+    "aim": "Conversational: perc and snare answer each other (one rests where the other hits)",
+    "plan": {
+      "version": 0,
+      "energy": 0.55,
+      "bars": 4,
+      "slots": [
+        {
+          "slot": 1,
+          "role": "kick",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 3,
+            "steps": 8
+          }
+        },
+        {
+          "slot": 2,
+          "role": "hat",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 6,
+            "steps": 16,
+            "rotation": [
+              1,
+              4
+            ]
+          }
+        },
+        {
+          "slot": 3,
+          "role": "snare",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 1,
+            "steps": 8,
+            "rotation": [
+              4,
+              4,
+              4,
+              3
+            ]
+          }
+        },
+        {
+          "slot": 4,
+          "role": "perc",
+          "rhythm": {
+            "type": "grid",
+            "variants": [
+              [
+                "~",
+                "~",
+                "~",
+                "x",
+                "~",
+                "~",
+                "~",
+                "x",
+                "~",
+                "~",
+                "~",
+                "x",
+                "~",
+                "~",
+                "x",
+                "~"
+              ],
+              [
+                "~",
+                "~",
+                "~",
+                "~",
+                "~",
+                "~",
+                "~",
+                "~",
+                "~",
+                "~",
+                "~",
+                "x",
+                "~",
+                "~",
+                "x",
+                "~"
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "source": "pool",
+    "band": 0.85,
+    "aim": "Offbeat-led: put every centre of gravity except the kick on the offbeats",
+    "plan": {
+      "version": 0,
+      "energy": 0.85,
+      "bars": 4,
+      "slots": [
+        {
+          "slot": 1,
+          "role": "kick",
+          "rhythm": {
+            "type": "grid",
+            "variants": [
+              [
+                "x",
+                "~",
+                [
+                  "~",
+                  "x"
+                ],
+                "~"
+              ],
+              [
+                "x",
+                "~",
+                "~",
+                "~"
+              ]
+            ]
+          }
+        },
+        {
+          "slot": 2,
+          "role": "hat",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 8,
+            "steps": 16,
+            "rotation": 1
+          }
+        },
+        {
+          "slot": 3,
+          "role": "snare",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 2,
+            "steps": 8,
+            "rotation": [
+              3,
+              3,
+              3,
+              5
+            ]
+          }
+        },
+        {
+          "slot": 4,
+          "role": "perc",
+          "rhythm": {
+            "type": "grid",
+            "variants": [
+              [
+                "~",
+                "~",
+                "~",
+                "x",
+                "~",
+                "~",
+                "~",
+                "x"
+              ],
+              [
+                "~",
+                "~",
+                "~",
+                "x",
+                "~",
+                "~",
+                "~",
+                [
+                  "x",
+                  "x"
+                ]
+              ],
+              [
+                "~",
+                [
+                  "~",
+                  "x"
+                ],
+                "~",
+                "x",
+                "~",
+                "~",
+                "~",
+                "x"
+              ],
+              [
+                "~",
+                "~",
+                "~",
+                "x",
+                "~",
+                "~",
+                "~",
+                "~"
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "source": "pool",
+    "band": 0.85,
+    "aim": "Emphasised gap: deliberately empty the area around beat 2 and push density to either side",
+    "plan": {
+      "version": 0,
+      "energy": 0.85,
+      "bars": 4,
+      "slots": [
+        {
+          "slot": 1,
+          "role": "kick",
+          "rhythm": {
+            "type": "grid",
+            "variants": [
+              [
+                "x",
+                "x",
+                "~",
+                "~",
+                "x",
+                "~",
+                "~",
+                "~"
+              ],
+              [
+                "x",
+                "~",
+                "~",
+                "~",
+                "~",
+                "x",
+                [
+                  "~",
+                  "x"
+                ],
+                "~"
+              ]
+            ]
+          }
+        },
+        {
+          "slot": 2,
+          "role": "hat",
+          "rhythm": {
+            "type": "grid",
+            "variants": [
+              [
+                "x",
+                "~",
+                "x",
+                [
+                  "x",
+                  "x"
+                ],
+                "~",
+                "~",
+                "~",
+                "x",
+                "~",
+                "~",
+                "x",
+                "~",
+                "x",
+                [
+                  "x",
+                  "x"
+                ],
+                "x",
+                "~"
+              ],
+              [
+                "~",
+                "x",
+                "x",
+                [
+                  "x",
+                  "x"
+                ],
+                "~",
+                "~",
+                "~",
+                [
+                  "~",
+                  "x"
+                ],
+                "x",
+                "~",
+                "x",
+                "x",
+                "~",
+                "x",
+                "x",
+                "~"
+              ]
+            ]
+          }
+        },
+        {
+          "slot": 3,
+          "role": "snare",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 1,
+            "steps": 8,
+            "rotation": [
+              4,
+              4,
+              4,
+              3
+            ]
+          }
+        },
+        {
+          "slot": 4,
+          "role": "perc",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 3,
+            "steps": 8,
+            "rotation": [
+              2,
+              7
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "source": "pool",
+    "band": 0.85,
+    "aim": "Rotation play: alternate euclid rotations <a b> for a two-cycle swell",
+    "plan": {
+      "version": 0,
+      "energy": 0.85,
+      "bars": 4,
+      "slots": [
+        {
+          "slot": 1,
+          "role": "kick",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 3,
+            "steps": 8,
+            "rotation": [
+              2,
+              5
+            ]
+          }
+        },
+        {
+          "slot": 2,
+          "role": "hat",
+          "rhythm": {
+            "type": "grid",
+            "variants": [
+              [
+                "~",
+                "x",
+                "~",
+                "x",
+                "~",
+                "x",
+                "~",
+                "x",
+                "~",
+                "x",
+                "~",
+                "x",
+                "~",
+                "x",
+                "~",
+                "x"
+              ],
+              [
+                "~",
+                "x",
+                "~",
+                "x",
+                "~",
+                "x",
+                "~",
+                [
+                  "x",
+                  "x"
+                ],
+                "~",
+                "x",
+                "~",
+                "x",
+                "~",
+                "x",
+                "~",
+                [
+                  "x",
+                  "x"
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "slot": 3,
+          "role": "snare",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 1,
+            "steps": 8,
+            "rotation": [
+              4,
+              4,
+              4,
+              3
+            ]
+          }
+        },
+        {
+          "slot": 4,
+          "role": "perc",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 4,
+            "steps": 16,
+            "rotation": [
+              3,
+              2
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "source": "pool",
+    "band": 0.85,
+    "aim": "Fill by alternating variants: a grid whose variants get dense only on the 4th cycle",
+    "plan": {
+      "version": 0,
+      "energy": 0.85,
+      "bars": 4,
+      "slots": [
+        {
+          "slot": 1,
+          "role": "kick",
+          "rhythm": {
+            "type": "grid",
+            "variants": [
+              [
+                "x",
+                "~",
+                [
+                  "~",
+                  "x"
+                ],
+                "~"
+              ],
+              [
+                "x",
+                "~",
+                [
+                  "~",
+                  "x"
+                ],
+                "~"
+              ],
+              [
+                "x",
+                "~",
+                "~",
+                "~"
+              ],
+              [
+                "x",
+                "~",
+                [
+                  "~",
+                  "x"
+                ],
+                [
+                  "~",
+                  "x"
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "slot": 2,
+          "role": "hat",
+          "rhythm": {
+            "type": "grid",
+            "variants": [
+              [
+                "~",
+                "~",
+                "x",
+                "~",
+                "~",
+                "x",
+                "x",
+                "~",
+                "~",
+                "~",
+                "x",
+                "~",
+                "~",
+                "x",
+                "x",
+                "~"
+              ],
+              [
+                "~",
+                "~",
+                "x",
+                "~",
+                "~",
+                "~",
+                "x",
+                "~",
+                "~",
+                "x",
+                "x",
+                "~",
+                "~",
+                "~",
+                "x",
+                "~"
+              ],
+              [
+                "~",
+                "~",
+                "x",
+                "~",
+                "~",
+                "x",
+                "x",
+                "~",
+                "~",
+                "~",
+                "x",
+                "~",
+                "~",
+                "x",
+                "x",
+                "~"
+              ],
+              [
+                "~",
+                "~",
+                "x",
+                "~",
+                "~",
+                "x",
+                "x",
+                "~",
+                "~",
+                "x",
+                "x",
+                [
+                  "x",
+                  "x"
+                ],
+                [
+                  "x",
+                  "x"
+                ],
+                "x",
+                "x",
+                "~"
+              ]
+            ]
+          }
+        },
+        {
+          "slot": 3,
+          "role": "snare",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 1,
+            "steps": 8,
+            "rotation": [
+              4,
+              4,
+              4,
+              3
+            ]
+          }
+        },
+        {
+          "slot": 4,
+          "role": "perc",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 3,
+            "steps": 8,
+            "rotation": [
+              2,
+              5
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "source": "pool",
+    "band": 0.85,
+    "aim": "Polymetric feel: layer euclids over 8 and 16 to create phase drift",
+    "plan": {
+      "version": 0,
+      "energy": 0.85,
+      "bars": 4,
+      "slots": [
+        {
+          "slot": 1,
+          "role": "kick",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 3,
+            "steps": 8,
+            "rotation": [
+              2,
+              5
+            ]
+          }
+        },
+        {
+          "slot": 2,
+          "role": "hat",
+          "rhythm": {
+            "type": "grid",
+            "variants": [
+              [
+                "~",
+                "x",
+                "~",
+                "x",
+                "~",
+                "x",
+                "~",
+                "x",
+                "~",
+                "x",
+                "~",
+                "x",
+                "~",
+                "x",
+                "~",
+                "x"
+              ],
+              [
+                "~",
+                "x",
+                "~",
+                "x",
+                "~",
+                [
+                  "x",
+                  "x"
+                ],
+                "~",
+                "x",
+                "~",
+                "x",
+                "~",
+                "x",
+                "~",
+                [
+                  "x",
+                  "x"
+                ],
+                "~",
+                "~"
+              ]
+            ]
+          }
+        },
+        {
+          "slot": 3,
+          "role": "snare",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 1,
+            "steps": 8,
+            "rotation": [
+              4,
+              4,
+              4,
+              3
+            ]
+          }
+        },
+        {
+          "slot": 4,
+          "role": "perc",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 5,
+            "steps": 16,
+            "rotation": [
+              0,
+              1,
+              2
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "source": "pool",
+    "band": 0.85,
+    "aim": "Minimal: make each slot work with the fewest hits (keep the total hit count down)",
+    "plan": {
+      "version": 0,
+      "energy": 0.85,
+      "bars": 4,
+      "slots": [
+        {
+          "slot": 1,
+          "role": "kick",
+          "rhythm": {
+            "type": "grid",
+            "variants": [
+              [
+                "x",
+                "~",
+                [
+                  "~",
+                  "x"
+                ],
+                "~"
+              ],
+              [
+                "x",
+                "~",
+                "~",
+                "~"
+              ]
+            ]
+          }
+        },
+        {
+          "slot": 2,
+          "role": "hat",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 6,
+            "steps": 16,
+            "rotation": [
+              1,
+              4
+            ]
+          }
+        },
+        {
+          "slot": 3,
+          "role": "snare",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 1,
+            "steps": 8,
+            "rotation": [
+              4,
+              4,
+              4,
+              3
+            ]
+          }
+        },
+        {
+          "slot": 4,
+          "role": "perc",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 3,
+            "steps": 8,
+            "rotation": [
+              2,
+              5
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "source": "pool",
+    "band": 0.85,
+    "aim": "Syncopation: shift the kick itself with x ~ ~ x shapes and let the hat hold the beat",
+    "plan": {
+      "version": 0,
+      "energy": 0.85,
+      "bars": 4,
+      "slots": [
+        {
+          "slot": 1,
+          "role": "kick",
+          "rhythm": {
+            "type": "grid",
+            "variants": [
+              [
+                "x",
+                "~",
+                "~",
+                "x",
+                "~",
+                "~",
+                "x",
+                "~"
+              ],
+              [
+                "x",
+                "~",
+                "~",
+                "x",
+                "~",
+                "~",
+                [
+                  "~",
+                  "x"
+                ],
+                "~"
+              ]
+            ]
+          }
+        },
+        {
+          "slot": 2,
+          "role": "hat",
+          "rhythm": {
+            "type": "grid",
+            "variants": [
+              [
+                "x",
+                "x",
+                "x",
+                "x",
+                "x",
+                "x",
+                "x",
+                [
+                  "x",
+                  "x"
+                ]
+              ],
+              [
+                "x",
+                "x",
+                "x",
+                [
+                  "x",
+                  "x"
+                ],
+                "x",
+                "x",
+                "x",
+                [
+                  "x",
+                  "x"
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "slot": 3,
+          "role": "snare",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 1,
+            "steps": 8,
+            "rotation": [
+              4,
+              4,
+              4,
+              3
+            ]
+          }
+        },
+        {
+          "slot": 4,
+          "role": "perc",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 5,
+            "steps": 16,
+            "rotation": [
+              1,
+              2
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "source": "pool",
+    "band": 0.85,
+    "aim": "Conversational: perc and snare answer each other (one rests where the other hits)",
+    "plan": {
+      "version": 0,
+      "energy": 0.85,
+      "bars": 4,
+      "slots": [
+        {
+          "slot": 1,
+          "role": "kick",
+          "rhythm": {
+            "type": "grid",
+            "variants": [
+              [
+                "x",
+                "~",
+                [
+                  "~",
+                  "x"
+                ],
+                "~"
+              ],
+              [
+                "x",
+                "~",
+                [
+                  "~",
+                  "x"
+                ],
+                [
+                  "~",
+                  "x"
+                ]
+              ]
+            ]
+          }
+        },
+        {
+          "slot": 2,
+          "role": "hat",
+          "rhythm": {
+            "type": "grid",
+            "variants": [
+              [
+                "~",
+                "x",
+                "~",
+                "x",
+                "~",
+                "x",
+                "~",
+                "x",
+                "~",
+                "x",
+                "~",
+                "x",
+                "~",
+                "x",
+                "~",
+                "x"
+              ],
+              [
+                "~",
+                "x",
+                "~",
+                "x",
+                "~",
+                "x",
+                "~",
+                [
+                  "x",
+                  "x"
+                ],
+                "~",
+                "x",
+                "~",
+                "x",
+                "~",
+                "x",
+                [
+                  "x",
+                  "x"
+                ],
+                "~"
+              ]
+            ]
+          }
+        },
+        {
+          "slot": 3,
+          "role": "snare",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 1,
+            "steps": 8,
+            "rotation": [
+              4,
+              4,
+              4,
+              3
+            ]
+          }
+        },
+        {
+          "slot": 4,
+          "role": "perc",
+          "rhythm": {
+            "type": "euclid",
+            "pulses": 3,
+            "steps": 8,
+            "rotation": [
+              3,
+              5
+            ]
+          }
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,68 @@
+-- tidal-conductor - Tidal-side reader functions
+--
+-- Load once after BootTidal (e.g. `:script path/to/Conductor.tidal`) and read the AI slots in
+-- your patterns:
+--
+--   d1 $ struct (aiPat 1) $ s "lt"            -- slot 1 drives a rhythm (Pattern Bool)
+--   d2 $ s "hh27" # n (aiPat 3)              -- slot 3 selects sample indexes (Pattern Note)
+--   d3 $ s (aiPat 4)                          -- slot 4 is a samples slot (Pattern String)
+--   d4 $ degradeBy (1 - aiF 1 "density") $ s "hh*16"   -- the density knob, 1 = all hits
+--
+-- The Conductor owns the state: it writes `ai/<channel>/<slot>` (mini-notation strings) and
+-- `ai/<channel>/density` (0..1) through Tidal's /ctrl listener (127.0.0.1:6010 by default).
+-- Tidal only reads. Channel 1 is the default; `aiPatOn ch slot` reads another channel.
+--
+-- Safety:
+-- * the whole-domain `parseBP` is used, not `parseBP_E`: a broken string turns into `silence`
+--   for that slot only, instead of a lazy exception that mutes the whole stream at tick time
+-- * `innerJoin` handles events that cross cycle boundaries without re-triggering them
+-- * with no Conductor running the slots read "~" (silence) and density reads its default
+--
+-- Requires: parseBP, cS, cF, innerJoin (Tidal >= 1.9). The file is two GHCi blocks: the readers
+-- (this block) need nothing from your boot file; the reset helpers (second block) need setS/setF
+-- from BootTidal (1.9: `setS = streamSetS tidal`, `setF = streamSetF tidal`; 1.10: exported by
+-- Sound.Tidal.Boot). A custom boot without them loses only `resetAI`, not the readers.
+-- If you paste this into your own boot file, keep the two `:{ ... :}` blocks as they are (do not
+-- move them inside a `let` block). In GHCi a reader evaluated on its own needs a type:
+-- `aiPat 1 :: Pattern Bool`; inside `struct`, `n` or `s` the type is inferred.
+
+:{
+
+-- | State key for a channel: "ai/<channel>/<key>"
+aiKeyOn :: Int -> String -> String
+aiKeyOn ch k = "ai/" ++ show ch ++ "/" ++ k
+
+-- | Read a continuous value (the density knob etc.) from a channel, with a default when unset.
+-- Pick the default so that the music works without a Conductor (1 for density).
+aiFOn :: Int -> Double -> String -> Pattern Double
+aiFOn ch d k = cF d (aiKeyOn ch k)
+
+aiF :: Double -> String -> Pattern Double
+aiF = aiFOn 1
+
+-- | Read a slot's mini-notation from a channel. Polymorphic: Bool for struct, Note for # n,
+-- String for s. Unset or unparsable -> silence for this slot only.
+aiPatOn :: (Parseable a, Enumerable a) => Int -> Int -> Pattern a
+aiPatOn ch slot = innerJoin $ safeParse <$> cS "~" (aiKeyOn ch (show slot))
+  where safeParse = either (const silence) id . parseBP
+
+aiPat :: (Parseable a, Enumerable a) => Int -> Pattern a
+aiPat = aiPatOn 1
+
+:}
+
+-- Reset helpers (need setS / setF from your boot file - see the note above)
+:{
+
+-- | Manual emergency reset of a channel: slots 1..8 to "~", density to 0.
+-- Normally the Conductor (on exit) or the SC deadman does this; use it when both are gone.
+-- `pure "~"` is deliberate: a string literal would go through parseBP_E.
+resetAIOn :: Int -> IO ()
+resetAIOn ch = do
+  mapM_ (\n -> setS (aiKeyOn ch (show n)) (pure "~")) [1 .. 8 :: Int]
+  setF (aiKeyOn ch "density") (pure 0)
+
+resetAI :: IO ()
+resetAI = resetAIOn 1
+
+:}

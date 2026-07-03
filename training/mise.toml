@@ -1,0 +1,5 @@
+# LoRA training environment (recipe).
+# Python is confined to this directory — the repository itself stays TS/Haskell/SC.
+# The parent (mise.toml) node/pnpm settings are merged in and remain in effect.
+[tools]
+python = "3.12"

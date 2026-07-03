@@ -1,0 +1,24 @@
+# Dependencies and build output
+node_modules
+*.tsbuildinfo
+pnpm-lock.yaml
+
+# Documentation (hand-formatted; Prettier leaves it alone)
+README.md
+NOTICE
+LICENSE
+docs
+
+# Session records and verification harnesses generated at runtime (already in .gitignore)
+sessions
+ghci
+
+# Data assets and generated files (not hand-formatted; keep the diff as the source of truth for the data)
+schema
+manifests
+plans
+training/*.ipynb
+
+# TidalCycles / SuperCollider sources (outside Prettier's scope)
+*.tidal
+*.scd

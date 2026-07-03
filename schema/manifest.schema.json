@@ -1,0 +1,118 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": [
+    "id",
+    "defaultLengthCycles",
+    "slots"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "a string matching the pattern ^[a-z0-9][a-z0-9-]*$",
+      "pattern": "^[a-z0-9][a-z0-9-]*$"
+    },
+    "name": {
+      "type": "string"
+    },
+    "style": {
+      "type": "string"
+    },
+    "defaultLengthCycles": {
+      "type": "number",
+      "enum": [
+        1,
+        2,
+        4,
+        8
+      ]
+    },
+    "allowTransition": {
+      "type": "boolean"
+    },
+    "slots": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "slot",
+          "generator",
+          "role"
+        ],
+        "properties": {
+          "slot": {
+            "type": "integer",
+            "description": "a number between 1 and 8",
+            "title": "between(1, 8)",
+            "minimum": 1,
+            "maximum": 8
+          },
+          "generator": {
+            "type": "string",
+            "enum": [
+              "struct",
+              "nsteps",
+              "samples"
+            ]
+          },
+          "role": {
+            "type": "string"
+          },
+          "nRange": {
+            "type": "array",
+            "minItems": 2,
+            "items": [
+              {
+                "type": "integer",
+                "description": "a number between 0 and 127",
+                "title": "between(0, 127)",
+                "minimum": 0,
+                "maximum": 127
+              },
+              {
+                "type": "integer",
+                "description": "a number between 0 and 127",
+                "title": "between(0, 127)",
+                "minimum": 0,
+                "maximum": 127
+              }
+            ],
+            "additionalItems": false
+          },
+          "nSet": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "description": "a number between 0 and 127",
+              "title": "between(0, 127)",
+              "minimum": 0,
+              "maximum": 127
+            },
+            "description": "an array of at most 16 item(s)",
+            "title": "maxItems(16)",
+            "minItems": 1,
+            "maxItems": 16
+          },
+          "vocab": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "description": "a string matching the pattern ^[A-Za-z][A-Za-z0-9_]*(:\\d{1,3})?$",
+              "pattern": "^[A-Za-z][A-Za-z0-9_]*(:\\d{1,3})?$"
+            },
+            "description": "an array of at most 64 item(s)",
+            "title": "maxItems(64)",
+            "minItems": 1,
+            "maxItems": 64
+          }
+        },
+        "additionalProperties": false
+      },
+      "description": "an array of at most 8 item(s)",
+      "title": "maxItems(8)",
+      "minItems": 1,
+      "maxItems": 8
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,26 @@
+{
+  "id": "example",
+  "name": "Example: two struct slots + one nsteps slot",
+  "defaultLengthCycles": 4,
+  "slots": [
+    {
+      "slot": 1,
+      "generator": "struct",
+      "role": "perc (low tom) — sparse to medium euclid or grid; do not fill every downbeat"
+    },
+    {
+      "slot": 2,
+      "generator": "struct",
+      "role": "hat (closed hi-hat) — 16th-note feel, leaning on the offbeats"
+    },
+    {
+      "slot": 3,
+      "generator": "nsteps",
+      "role": "hat sample selection (paired with slot 2)",
+      "nRange": [
+        0,
+        7
+      ]
+    }
+  ]
+}

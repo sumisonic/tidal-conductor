@@ -1,0 +1,105 @@
+-- Specification tests for integration/tidal/Conductor.tidal.
+-- Run inside GHCi after BootTidal.hs and Conductor.tidal are loaded (see haskell/run-aipat-spec.sh).
+-- State is injected directly (State + ValueMap), never through the live stream: queryArc evaluates
+-- with an empty control map, so setS would not be visible to it.
+
+import qualified Data.Map.Strict as Map
+import Control.Exception (evaluate, try, SomeException)
+import Data.IORef
+import Data.List (sortOn)
+
+specRef <- newIORef (0 :: Int, [] :: [String])
+
+:{
+check :: (Eq a, Show a) => String -> a -> a -> IO ()
+check name expected actual
+  | expected == actual = modifyIORef specRef (\(n, fs) -> (n + 1, fs)) >> putStrLn ("  ok   " ++ name)
+  | otherwise = modifyIORef specRef (\(n, fs) -> (n, fs ++ [name])) >> putStrLn ("  FAIL " ++ name ++ ": expected " ++ show expected ++ ", got " ++ show actual)
+
+-- query with an injected control map over an arc
+withState :: [(String, Value)] -> Arc -> Pattern a -> [Event a]
+withState kvs arc pat = query pat (State arc (Map.fromList kvs))
+
+-- force every event (values and arcs) so lazy parse exceptions cannot hide
+forceEvents :: (Show a) => [Event a] -> IO Int
+forceEvents es = evaluate (length (show es))
+:}
+
+putStrLn "aiPat spec"
+
+-- keys
+check "aiKeyOn 1 \"3\"" "ai/1/3" (aiKeyOn 1 "3")
+check "aiKeyOn 7 density" "ai/7/density" (aiKeyOn 7 "density")
+
+-- aiF: default when unset, injected value, channel isolation
+check "aiF default when unset" [1.0] (map value (queryArc (aiF 1 "density") (Arc 0 1)))
+check "aiF reads injected state" [0.7] (map value (withState [("ai/1/density", VF 0.7)] (Arc 0 1) (aiF 0 "density")))
+check "aiF channel isolation" [0.5] (map value (withState [("ai/2/density", VF 0.2)] (Arc 0 1) (aiFOn 1 0.5 "density")))
+
+-- aiPat as Pattern Bool: euclid, struct wiring, invalid -> silent, "~", unset
+check "aiPat euclid true count" 3 (length (filter value (withState [("ai/1/1", VS "t(3,8)")] (Arc 0 1) (aiPat 1 :: Pattern Bool))))
+check "struct wiring" 3 (length (withState [("ai/1/1", VS "t(3,8)")] (Arc 0 1) (struct (aiPat 1) $ s "lt")))
+check "invalid string is silent" 0 (length (withState [("ai/1/1", VS "t(3,")] (Arc 0 1) (struct (aiPat 1) $ s "lt")))
+check "tilde is silent" 0 (length (withState [("ai/1/1", VS "~")] (Arc 0 1) (struct (aiPat 1) $ s "lt")))
+check "unset is silent" 0 (length (queryArc (struct (aiPat 1) $ s "lt") (Arc 0 1)))
+
+-- one invalid slot must not take the valid slot down (the whole point of parseBP over parseBP_E)
+:{
+do
+  let stacked = stack [struct (aiPat 1) $ s "lt", struct (aiPat 2) $ s "hh"]
+      es = withState [("ai/1/1", VS "t(3,"), ("ai/1/2", VS "t(3,8)")] (Arc 0 1) stacked
+  n <- forceEvents es
+  check "invalid slot 1 + valid slot 2: only slot 2 sounds" 3 (length es)
+  check "all surviving events are hh" True (Prelude.all (\e -> Map.lookup "s" (value e) == Just (VS "hh")) es)
+  check "forcing events raised no exception" True (n > 0)
+:}
+
+-- cycle boundary: events crossing Arc 0.5 1.5 match a directly parsed pattern
+:{
+do
+  let direct = either (const silence) id (parseBP "t(3,8) t(5,8)") :: Pattern Bool
+      byStart = sortOn (start . part)
+      viaAi = byStart (withState [("ai/1/1", VS "t(3,8) t(5,8)")] (Arc 0.5 1.5) (aiPat 1 :: Pattern Bool))
+      ref = byStart (queryArc direct (Arc 0.5 1.5))
+  -- query order is not part of the contract, so compare sorted by part start
+  check "cross-cycle events equal the direct parse (values)" (map value ref) (map value viaAi)
+  check "cross-cycle events equal the direct parse (arcs)" (map part ref) (map part viaAi)
+  check "cross-cycle: 16 events across the boundary" 16 (length viaAi)
+:}
+
+-- channel isolation for slots
+check "aiPatOn 2 ignores channel 1" 0 (length (withState [("ai/1/1", VS "t(3,8)")] (Arc 0 1) (struct (aiPatOn 2 1) $ s "lt")))
+check "aiPatOn 2 reads channel 2" 3 (length (withState [("ai/2/1", VS "t(3,8)")] (Arc 0 1) (struct (aiPatOn 2 1) $ s "lt")))
+
+-- three types: Bool (struct), Note (# n), String (s)
+check "Pattern Note values" [0, 3, 1] (map value (withState [("ai/1/3", VS "0 3 1")] (Arc 0 1) (aiPat 3 :: Pattern Note)))
+check "Pattern String values (a rest yields no event)" ["bd:0", "sn:1"] (map value (withState [("ai/1/4", VS "bd:0 ~ sn:1")] (Arc 0 1) (aiPat 4 :: Pattern String)))
+check "s (aiPat 4) events" 2 (length (withState [("ai/1/4", VS "bd:0 ~ sn:1")] (Arc 0 1) (s (aiPat 4))))
+
+-- resetAI writes through the live stream (IO). setS/setF store patterns (VPattern), so read the
+-- stored value back by evaluating it over one cycle instead of comparing constructors
+:{
+do
+  let shown v = case v of
+        Just (VS x) -> [x]
+        Just (VPattern p) -> map (show . value) (queryArc p (Arc 0 1))
+        _ -> []
+      shownF v = case v of
+        Just (VF x) -> [show x]
+        Just (VPattern p) -> map (show . value) (queryArc p (Arc 0 1))
+        _ -> []
+  setS (aiKeyOn 1 "1") (pure "t(3,8)")
+  resetAI
+  v1 <- getState "ai/1/1"
+  vd <- getState "ai/1/density"
+  check "resetAI clears slot 1" ["\"~\""] (map (filter (/= 's')) (shown v1))
+  check "resetAI zeroes density" True (any (`elem` ["0.0", "0.0f", "0"]) (map (filter (\c -> c /= 'f')) (shownF vd)))
+:}
+
+:{
+do
+  (n, fs) <- readIORef specRef
+  putStrLn (show n ++ " passed, " ++ show (length fs) ++ " failed")
+  -- The runner (haskell/run-aipat-spec.sh) greps for this marker; GHCi swallows exit codes raised in :script
+  putStrLn (if null fs then "AIPAT SPEC OK" else "AIPAT SPEC FAILED")
+:}

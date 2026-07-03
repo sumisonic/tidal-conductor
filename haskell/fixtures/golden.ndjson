@@ -1,0 +1,66 @@
+{"kind":"bool","pattern":"<[t t t t t t t [t t]] [t t t [t t] t t t [t t]]>"}
+{"kind":"bool","pattern":"<[t t ~ ~ t ~ ~ ~] [t ~ ~ ~ ~ t [~ t] ~]>"}
+{"kind":"bool","pattern":"<[t ~ [~ t] ~] [t ~ [~ t] [~ t]]>"}
+{"kind":"bool","pattern":"<[t ~ [~ t] ~] [t ~ [~ t] ~] [t ~ ~ ~] [t ~ [~ t] [~ t]]>"}
+{"kind":"bool","pattern":"<[t ~ [~ t] ~] [t ~ ~ ~]>"}
+{"kind":"bool","pattern":"<[t ~ t [t t] ~ ~ ~ t ~ ~ t ~ t [t t] t ~] [~ t t [t t] ~ ~ ~ [~ t] t ~ t t ~ t t ~]>"}
+{"kind":"bool","pattern":"<[t ~ t ~ t ~ t ~] [t ~ t ~ t ~ ~ ~]>"}
+{"kind":"bool","pattern":"<[t ~ ~ t ~ ~ t ~] [t ~ ~ t ~ ~ [~ t] ~]>"}
+{"kind":"bool","pattern":"<[t ~ ~ t ~ ~ t ~] [t ~ ~ t ~ ~ ~ ~]>"}
+{"kind":"bool","pattern":"<[t ~ ~ t ~ ~ ~ ~] [t ~ ~ t ~ ~ t ~]>"}
+{"kind":"bool","pattern":"<[t ~ ~ ~ ~ ~ ~ ~] [t ~ ~ ~ ~ ~ [~ t] ~]>"}
+{"kind":"bool","pattern":"<[t ~ ~ ~] [t ~ ~ ~] [t ~ ~ ~] [t ~ [~ t] ~]>"}
+{"kind":"bool","pattern":"<[t ~ ~ ~] [~ t ~ ~] [~ ~ t ~] [~ ~ ~ t]>"}
+{"kind":"bool","pattern":"<[~ [~ t] ~ ~] [~ ~ [~ t] ~] [~ ~ ~ [~ t]] [~ ~ [~ t] [~ t]]>"}
+{"kind":"bool","pattern":"<[~ [~ ~ ~ t] ~ ~] [~ [~ ~ ~ t] ~ [~ t]] [~ ~ ~ [~ t]]>"}
+{"kind":"bool","pattern":"<[~ t ~ t ~ t ~ t ~ t ~ t ~ t ~ t] [~ t ~ t ~ [t t] ~ t ~ t ~ t ~ [t t] ~ ~]>"}
+{"kind":"bool","pattern":"<[~ t ~ t ~ t ~ t ~ t ~ t ~ t ~ t] [~ t ~ t ~ t ~ [t t] ~ t ~ t ~ t [t t] ~]>"}
+{"kind":"bool","pattern":"<[~ t ~ t ~ t ~ t ~ t ~ t ~ t ~ t] [~ t ~ t ~ t ~ [t t] ~ t ~ t ~ t ~ [t t]]>"}
+{"kind":"bool","pattern":"<[~ t ~ t ~ t ~ t] [~ t ~ ~ ~ t ~ t]>"}
+{"kind":"bool","pattern":"<[~ t ~ ~ ~ t ~ ~] [~ t ~ ~ ~ t ~ ~] [~ t ~ ~ ~ t ~ ~] [~ t ~ t ~ t ~ t]>"}
+{"kind":"bool","pattern":"<[~ ~ [~ t] ~] [[~ t] ~ [~ t] ~]>"}
+{"kind":"bool","pattern":"<[~ ~ [~ t] ~] [~ [~ t] ~ ~]>"}
+{"kind":"bool","pattern":"<[~ ~ [~ t] ~] [~ ~ [~ t] ~] [~ ~ [~ t] ~] [~ ~ [~ t] [t t ~]]>"}
+{"kind":"bool","pattern":"<[~ ~ t t ~ ~ ~ t ~ t ~ t ~ t ~ t] [~ ~ t t ~ ~ ~ ~ ~ t ~ t ~ t t t]>"}
+{"kind":"bool","pattern":"<[~ ~ t t ~ ~ ~ t ~ ~ t ~ ~ ~ t ~] [~ ~ t ~ ~ ~ ~ t ~ ~ t ~ ~ ~ t ~]>"}
+{"kind":"bool","pattern":"<[~ ~ t ~ ~ t t ~ ~ ~ t ~ ~ t t ~] [~ ~ t ~ ~ ~ t ~ ~ t t ~ ~ ~ t ~] [~ ~ t ~ ~ t t ~ ~ ~ t ~ ~ t t ~] [~ ~ t ~ ~ t t ~ ~ t t [t t] [t t] t t ~]>"}
+{"kind":"bool","pattern":"<[~ ~ ~ [~ t] ~ [~ t] ~ ~] [~ [~ t] ~ ~ ~ [~ t] ~ ~]>"}
+{"kind":"bool","pattern":"<[~ ~ ~ t ~ ~ ~ t ~ ~ ~ t ~ ~ t ~] [~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ t ~ ~ t ~]>"}
+{"kind":"bool","pattern":"<[~ ~ ~ t ~ ~ ~ t] [~ ~ ~ t ~ ~ ~ [t t]] [~ [~ t] ~ t ~ ~ ~ t] [~ ~ ~ t ~ ~ ~ ~]>"}
+{"kind":"bool","pattern":"<[~ ~ ~ t ~ ~ ~ ~ ~ ~ t ~ ~ ~ ~ ~] [~ ~ ~ t ~ ~ ~ ~ ~ ~ t ~ ~ ~ t ~] [~ ~ ~ t ~ ~ ~ ~ ~ ~ t ~ ~ ~ ~ ~] [~ ~ ~ t ~ ~ t ~ t ~ t t ~ t t t]>"}
+{"kind":"bool","pattern":"[t ~ t ~] [t ~ t ~] [t ~ t ~] [t ~ t ~] [t ~ t ~] [t ~ t ~] [t ~ t ~] [t ~ t ~] [t ~ t ~] [t ~ t ~] [t ~ t ~] [t ~ t ~] [t ~ t ~] [t ~ t ~] [t ~ t ~] [t ~ t ~]"}
+{"kind":"bool","pattern":"t ~"}
+{"kind":"bool","pattern":"t ~ [~ t] ~"}
+{"kind":"bool","pattern":"t ~ t ~ t ~ t ~ t ~ t ~ t ~ t ~ t ~ t ~ t ~ t ~ t ~ t ~ t ~ t ~"}
+{"kind":"bool","pattern":"t(1,16,15)"}
+{"kind":"bool","pattern":"t(1,2)"}
+{"kind":"bool","pattern":"t(1,8,<3 3 3 5>)"}
+{"kind":"bool","pattern":"t(1,8,<4 4 4 3>)"}
+{"kind":"bool","pattern":"t(1,8,<5 5 5 3>)"}
+{"kind":"bool","pattern":"t(16,16)"}
+{"kind":"bool","pattern":"t(2,8,<1 3>)"}
+{"kind":"bool","pattern":"t(2,8,<3 3 3 5>)"}
+{"kind":"bool","pattern":"t(3,16,<0 1 2>)"}
+{"kind":"bool","pattern":"t(3,8)"}
+{"kind":"bool","pattern":"t(3,8,0)"}
+{"kind":"bool","pattern":"t(3,8,<0 0 0 2>)"}
+{"kind":"bool","pattern":"t(3,8,<0 15 7 1>)"}
+{"kind":"bool","pattern":"t(3,8,<1 2>)"}
+{"kind":"bool","pattern":"t(3,8,<2 5>)"}
+{"kind":"bool","pattern":"t(3,8,<2 7>)"}
+{"kind":"bool","pattern":"t(3,8,<3 5>)"}
+{"kind":"bool","pattern":"t(3,8,<5 2>)"}
+{"kind":"bool","pattern":"t(4,16,<3 2>)"}
+{"kind":"bool","pattern":"t(4,8,1)"}
+{"kind":"bool","pattern":"t(5,16,1)"}
+{"kind":"bool","pattern":"t(5,16,<0 1 2>)"}
+{"kind":"bool","pattern":"t(5,16,<1 2>)"}
+{"kind":"bool","pattern":"t(6,16,<1 4>)"}
+{"kind":"bool","pattern":"t(8,16)"}
+{"kind":"bool","pattern":"t(8,16,1)"}
+{"kind":"bool","pattern":"~"}
+{"kind":"note","pattern":"0 ~"}
+{"kind":"note","pattern":"127 0 ~ 64"}
+{"kind":"note","pattern":"<[0 1 2 3] [~ 7 ~ 7]>"}
+{"kind":"string","pattern":"<[bd:0 mt:2 ~ cp] [~ hh:12 hh:12 bd:0]>"}
+{"kind":"string","pattern":"bd:0 ~ sn"}
